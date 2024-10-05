@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hakam Qalalwi CV</title>
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
         <div class="container">
@@ -13,6 +14,7 @@
                 <div class="header-info">
                     <h2>Hakam Qalalwi</h2>
                     <h4>Software Engineer</h4>
+                    <button id="themeSwitcher" class="form-submit">Switch Theme</button>
                     <p class="links">
                         <a href="https://www.linkedin.com/in/hakamqalalwi/">LinkedIn</a> | 
                         <a href="https://github.com/HakamQalalwi">GitHub</a> |
@@ -28,8 +30,8 @@
                 <p>I am passionate about creating innovative and scalable solutions that solve real-world problems and add value to the customers and stakeholders. I am also committed to continuous learning and improvement, as well as collaborating and sharing knowledge with my team and the wider developer community. Let's connect and explore potential collaborations!</p>
             </section>
             
+            <h4 onclick="toggleSection('experience')">Experience</h4>
             <section id="experience" class="experience">
-                <h4>Experience</h4>
                 <ul>
                     <li>
                         <h5>Software Engineer Intern | KuantumPi (Jul 2022 - Aug 2022)</h5>
@@ -90,32 +92,36 @@
             
             <section id="contact" class="contact">
                 <h4>Contact Information</h4>
-                <form>
+                <form id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name:</label><br>
+                        <label for="name">Name:*</label><br>
                         <input type="text" id="name" name="name" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" class="form-input">
+                        <label for="email">Email:*</label><br>
+                        <input type="text" id="email" name="email" class="form-input">
                     </div>
                     <div class="form-group">
                         <label for="hours">Available hours:</label><br>
                         <input type="text" id="hours" name="hours" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label for="country">Country:</label><br>
+                        <label for="country">Country:*</label><br>
                         <input type="text" id="country" name="country" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message:</label><br>
+                        <label for="message">Message:*</label><br>
                         <textarea id="message" name="message" rows="4" class="form-textarea"></textarea>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" class="form-submit">
+                        <button id="funFactButton" class="form-submit">Show Fun Fact</button>
+<p id="funFact" style="display:none; font-style:italic;"></p>
+
                     </div>
                 </form>
             </section>
         </div>
     </body>
+    <script src="script.js"></script>
 </html>
